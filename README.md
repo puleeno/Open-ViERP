@@ -58,13 +58,15 @@ Open-ViERP là một hệ thống quản trị doanh nghiệp (ERP) mã nguồn 
 ### Các bước cài đặt
 
 1. **Clone repository:**
-   ```bash
-   git clone [https://github.com/puleeno/Open-ViERP.git](https://github.com/puleeno/Open-ViERP.git)
+
+```bash
+   git clone git@github.com:puleeno/Open-ViERP.git Open-ViERP
    cd Open-ViERP
 
 ```
 
 2. **Cài đặt các gói phụ thuộc (Dependencies):**
+
 ```bash
 composer install
 npm install
@@ -73,6 +75,7 @@ npm install
 
 
 3. **Cấu hình môi trường (`.env`):**
+
 ```bash
 cp .env.example .env
 php artisan key:generate
@@ -81,7 +84,9 @@ php artisan key:generate
 
 
 *Cập nhật thông tin kết nối CSDL trong file `.env`.*
+
 4. **Chạy Migration & Seed dữ liệu mẫu:**
+
 ```bash
 php artisan migrate --seed
 
@@ -89,6 +94,7 @@ php artisan migrate --seed
 
 
 5. **Biên dịch Frontend & Khởi chạy server:**
+
 ```bash
 npm run build
 php artisan serve
